@@ -16,7 +16,7 @@ namespace Task1.Xsd
 		{
 			_settings = new XmlReaderSettings();
 
-			_settings.Schemas.Add("http://library.by/catalog", "../../books.xsd");
+			_settings.Schemas.Add("http://library.by/catalog", "books.xsd");
 			_settings.ValidationEventHandler +=
 				delegate (object sender, ValidationEventArgs e)
 				{
@@ -32,7 +32,7 @@ namespace Task1.Xsd
 		public void CheckValidXml()
 		{
 			_errorCount = 0;
-			XmlReader reader = XmlReader.Create("../../books.xml", _settings);
+			XmlReader reader = XmlReader.Create("books.xml", _settings);
 
 			while (reader.Read()) { }
 
@@ -43,7 +43,7 @@ namespace Task1.Xsd
 		public void CheckInvalidXml()
 		{
 			_errorCount = 0;
-			XmlReader reader = XmlReader.Create("../../booksInvalid.xml", _settings);
+			XmlReader reader = XmlReader.Create("booksInvalid.xml", _settings);
 
 			while (reader.Read()) { }
 

@@ -6,7 +6,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace Task1.Xsd
 {
 	[TestClass]
-	public class XmlVerificationTest
+	public class XmlVerificationTests
 	{
 		XmlReaderSettings _settings;
 		private int _errorCount;
